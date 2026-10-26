@@ -1,0 +1,76 @@
+﻿<Window x:Class="Mymoniter.login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Mymoniter"
+        Height="650"
+        Width="600"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize">
+
+
+    <StackPanel VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Width="420">
+
+        <TextBlock Text="MYMONITER" FontSize="30" FontWeight="Bold" Foreground="black" HorizontalAlignment="Center" Margin="0,0,0,8"/>
+        <TextBlock Text="SECURE USER ACCESS" FontSize="12" Foreground="black" HorizontalAlignment="Center" Margin="0,0,0,25"/>
+        <TabControl Background="Pink" BorderBrush="white" BorderThickness="1.5" Foreground="pink">
+        <TabItem Background="Transparent" Header="Login" FontSize="18" Width="200">
+
+                <StackPanel Background="Transparent">
+
+                    <TextBlock Text="User Name" Foreground="black" FontSize="14" Margin="0,8,0,7"/>
+                    <TextBox Name="txtuser" MaxLength="10" Height="38" FontSize="15" Padding="8" Background="white" Foreground="black" BorderBrush="#00D9FF" Margin="0,0,0,15"/>
+                    <TextBlock Text="Password" Foreground="black"  FontSize="14" Margin="0,0,0,7"/>
+                    <PasswordBox Name="pwpassword" MaxLength="10" PasswordChar="*" Height="38" FontSize="15" Padding="8" Background="white" Foreground="black" BorderBrush="#00D9FF" Margin="0,0,0,10"/>
+                    <TextBox/>
+
+                    <Button Name="btnlogin" Click="btnlogin_Click" Content="LOGIN" Height="42" FontSize="15" FontWeight="Bold" Background="pink" Foreground="#071A3A" BorderThickness="0" Margin="0,20,0,10" Cursor="Hand"/>
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Background="Transparent"
+                Header="Register"
+                     FontSize="18"
+                     Width="200">
+
+                <StackPanel Background="Transparent">
+
+
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,8,0,7">
+                        <TextBlock Text="User Name"
+                                   Foreground="black"/>
+                        <TextBlock Foreground="#FF657F"
+                                   Text=" *"/>
+                    </StackPanel>
+
+                    <StackPanel>
+                        <TextBox Name="txtreguser" MaxLength="10" Height="35" FontSize="14" Padding="7" Background="#F0F5FF" BorderBrush="#00D9FF"/>
+                        <TextBlock Name="erroruser" Foreground="white"/>
+                    </StackPanel>
+
+                    <Label Foreground="black" Padding="0,8,0,5">
+                        <Label.Content>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Password"/>
+                                <TextBlock Text=" *"
+                                           Foreground="#FF657F"/>
+                            </StackPanel>
+                        </Label.Content>
+                    </Label>
+                    
+                    <PasswordBox MaxLength="10" Name="pwregpassword" Height="35" FontSize="14" Padding="7" Foreground="black" Background="#F0F5FF" BorderBrush="#00D9FF"/>
+                    <TextBox Name="errpassword"  Foreground="black"/>
+                    <TextBlock Text="Age" Foreground="black" Margin="0,8,0,5"/>
+                    <TextBox MaxLength="3" Name="txtage" Height="35" FontSize="14" Padding="7" Foreground="black"  Background="#F0F5FF" BorderBrush="#00D9FF"/>
+                    <TextBox Name="errage" Foreground="black"/>
+                    <TextBlock Text="Email" Foreground="black" Margin="0,8,0,5"/>
+                    <TextBox MaxLength="30"  Name="txtemail" Height="35"  FontSize="14" Padding="7" Foreground="black" Background="#F0F5FF" BorderBrush="#00D9FF"/>
+                    <TextBox Name="erremail" Foreground="black"/>
+                    <Button Name="btnreg" Click="btnreg_Click" Content="REGISTER" Height="42" FontSize="15" FontWeight="Bold" Background="pink" Foreground="#071A3A" BorderThickness="0" Margin="0,18,0,8" Cursor="Hand"/>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </StackPanel>
+</Window>
